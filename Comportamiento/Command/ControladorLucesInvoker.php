@@ -12,7 +12,7 @@ class ControladorLucesInvoker implements IInvoker {
     private $command;
 
     public function invoke() {
-        $this->command->execute();
+       return $this->command->execute();
     }
 
     public function setCommand(ICommand $command) {

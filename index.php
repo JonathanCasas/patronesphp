@@ -26,12 +26,19 @@ $apagarcortas = new \Comportamiento\Command\ApagarLucesCommand($lucesCortas);
 $encenderLargas = new Comportamiento\Command\EncenderLucesCommand($lucesLargas);
 $apagarLargas = new \Comportamiento\Command\ApagarLucesCommand($lucesLargas);
 
-write($encenderPosicion->execute());
-write($apagarPosicion->execute());
+$controlador = new Comportamiento\Command\ControladorLucesInvoker();
+$controlador->setCommand($encenderPosicion);
+write($controlador->invoke());
+$controlador->setCommand($apagarPosicion);
+write($controlador->invoke());
 
-write($encenderCortas->execute());
-write($apagarcortas->execute());
+$controlador->setCommand($encenderCortas);
+write($controlador->invoke());
+$controlador->setCommand($apagarcortas);
+write($controlador->invoke());
 
-write($encenderLargas->execute());
-write($apagarLargas->execute());
+$controlador->setCommand($encenderLargas);
+write($controlador->invoke());
+$controlador->setCommand($apagarLargas);
+write($controlador->invoke());
 
