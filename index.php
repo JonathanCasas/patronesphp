@@ -13,6 +13,10 @@ function write(string $string) {
     echo $string . "<br>";
 }
 
+/**
+ * Patron command
+ */
+echo 'Patron Command';
 $lucesPosicion = new \Comportamiento\Command\LucesPosicion();
 $lucesCortas = new \Comportamiento\Command\LucesCortas();
 $lucesLargas = new Comportamiento\Command\LucesLargas();
@@ -42,3 +46,8 @@ write($controlador->invoke());
 $controlador->setCommand($apagarLargas);
 write($controlador->invoke());
 
+echo '<br>';
+
+$proxy = new Estructurales\Proxy\GuardarDatos();
+\Estructurales\Proxy\ConnectionManager::conectate();
+$proxy->save([]);
