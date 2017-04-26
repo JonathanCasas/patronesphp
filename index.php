@@ -9,14 +9,14 @@ spl_autoload_register(function($clase) {
     }
 });
 
-function write(string $string) {
+function write(string $string = '') {
     echo $string . "<br>";
 }
 
 /**
  * Patron command
  */
-echo 'Patron Command';
+write('patron command');
 $lucesPosicion = new \Comportamiento\Command\LucesPosicion();
 $lucesCortas = new \Comportamiento\Command\LucesCortas();
 $lucesLargas = new Comportamiento\Command\LucesLargas();
@@ -46,8 +46,23 @@ write($controlador->invoke());
 $controlador->setCommand($apagarLargas);
 write($controlador->invoke());
 
-echo '<br>';
-
+write();
+write();
+write('patron proxy');
 $proxy = new Estructurales\Proxy\GuardarDatos();
 \Estructurales\Proxy\ConnectionManager::conectate();
 $proxy->save([]);
+
+write();
+write();
+write('Patron Chain of responsability');
+$banco = new \Comportamiento\ChainOfResponsability\Banco();
+$banco->solicitudPrestamo(5000);
+
+write();
+write();
+write('patron strategy');
+$socio = new \Comportamiento\Strategy\Socio();
+$libro = new Comportamiento\Strategy\LibroFinder();
+write($libro->findLibro($socio, '')->getEstado());
+
