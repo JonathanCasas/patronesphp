@@ -22,7 +22,7 @@ class Usuario implements IUsuarioChat {
 
     public function recibe(string $de, string $msg) {
         $s = "El usuario {$de} te dice {$msg}";
-        echo "{$this->nombre }: {$s}";
+        echo "{$this->nombre }: {$s}<br>";
     }
 
     function getNombre() {
