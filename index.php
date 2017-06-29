@@ -65,4 +65,6 @@ function write(string $string = '') {
 //Comportamiento\Strategy\StrategyMain::main();
 //\Comportamiento\Visitor\VisitorMain::main();
 //Comportamiento\Mediator\Mediator::main();
-Creacionales\Builder\Builder::main();
+//Creacionales\Builder\Builder::main();
+
+\Estructurales\Decorador\Decorator::main();
