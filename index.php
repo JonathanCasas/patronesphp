@@ -66,5 +66,7 @@ function write(string $string = '') {
 //\Comportamiento\Visitor\VisitorMain::main();
 //Comportamiento\Mediator\Mediator::main();
 //Creacionales\Builder\Builder::main();
-
-\Estructurales\Decorador\Decorator::main();
+//\Estructurales\Decorador\Decorator::main();
+//Comportamiento\Interpreter\InterpreterMain::main();
+//\Creacionales\AbstractFactory\AbstractFactory::main();
+Estructurales\Adapter\Adapter::main();
