@@ -71,4 +71,5 @@ function write(string $string = '') {
 //\Creacionales\AbstractFactory\AbstractFactory::main();
 //Estructurales\Adapter\Adapter::main();
 //\Estructurales\Bridge\Bridge::main();
-Creacionales\Singleton\Singleton::main();
+//Creacionales\Singleton\Singleton::main();
+Estructurales\Proxy\Proxy::main();
